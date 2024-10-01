@@ -1,12 +1,13 @@
 import javax.swing.*;
-// MAin
+
 public class Main {
 
     // Konstanter för meddelanden som används i programmet
-    private static final String PROMPT_WATERING = "Vilken växt ska få vätska? \n(skriv 'avsluta' för att stänga programmet)";
-    private static final String MESSAGE_PLANT_NOT_FOUND = "Växten '%s' finns inte på hotellet. Vänligen försök igen!";
-    private static final String MESSAGE_PROGRAM_EXIT = "Programmet avslutas!";
-    private static final String MESSAGE_PLANT_WATERING = "%s ska ha %.2f liter %s per dag.";
+    private static final String PROMPT_WATERING = "Which plant should get liquid? \n" +
+            "(type 'exit' to close the program)";
+    private static final String MESSAGE_PLANT_NOT_FOUND = "The plant '%s' is not in the hotel. Please try again!";
+    private static final String MESSAGE_PROGRAM_EXIT = "Exits the program!";
+    private static final String MESSAGE_PLANT_WATERING = "%s should have %.2f liters of %s per day";
 
     public static void main(String[] args) {
         // Polymorfism - Skapar och lagrar alla växter i en array och tilldelar dom namn & höjd.
@@ -22,9 +23,9 @@ public class Main {
             String input = JOptionPane.showInputDialog(null,
                     PROMPT_WATERING);
 
-            // Kontroll för att se om användaren klickat cancel eller skrivit avsluta
-            if (input == null || input.equalsIgnoreCase("avsluta")) {
-                // Användaren har klickat "avbryt" eller skrivit "avsluta"
+            // Kontroll för att se om användaren klickat cancel eller skrivit exit
+            if (input == null || input.equalsIgnoreCase("exit")) {
+                // Användaren har klickat "avbryt" eller skrivit "exit"
                 JOptionPane.showMessageDialog(null, MESSAGE_PROGRAM_EXIT);
                 break; // Avbryter loopen och avslutar programmet
             }
