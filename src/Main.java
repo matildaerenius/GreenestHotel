@@ -1,5 +1,5 @@
 import javax.swing.*;
-
+// MAin
 public class Main {
 
     // Konstanter för meddelanden som används i programmet
