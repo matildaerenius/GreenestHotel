@@ -11,7 +11,7 @@ public enum LiquidType {
     LiquidType(String description) {
         this.description = description;
     }
-    // Inkapsling - Getter för att hämta beskrivningen
+    // Inkapsling - Getter för att hämta beskrivningen.
     public String getDescription() {
         return description;
     }
