@@ -2,7 +2,7 @@ import javax.swing.*;
 
 public class Main {
 
-    // Konstanter för meddelanden som används i programmet
+    // Konstanter för meddelanden som används i programmet.
     private static final String PROMPT_WATERING = "Which plant should get liquid? \n" +
             "(type 'exit' to close the program)";
     private static final String MESSAGE_PLANT_NOT_FOUND = "The plant '%s' is not in the hotel. Please try again!";
