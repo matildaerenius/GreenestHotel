@@ -5,7 +5,7 @@ public enum LiquidType {
     MINERAL_WATER("mineral water"),
     PROTEIN_DRINK("protein drink");
 
-    private final String description; // Inkapsling - Privat variabel med getter för att hämta värdet
+    private final String description; // Inkapsling - Privat variabel med getter för att hämta värdet.
 
     // Konstruktor
     LiquidType(String description) {
