@@ -7,7 +7,7 @@ public class Main {
             "(type 'exit' to close the program)";
     private static final String MESSAGE_PLANT_NOT_FOUND = "The plant '%s' is not in the hotel. Please try again!";
     private static final String MESSAGE_PROGRAM_EXIT = "Exits the program!";
-    private static final String MESSAGE_PLANT_WATERING = "%s should have %.2f liters of %s per day";
+    private static final String MESSAGE_PLANT_WATERING = " The %s should have %.2f liters of %s per day";
 
     public static void main(String[] args) {
         // Polymorfism - Skapar och lagrar alla växter i en array och tilldelar dom namn & höjd.
@@ -36,7 +36,9 @@ public class Main {
             if (plant != null) {
                 // Polymorfism - Använder getDailyWaterAmount och getLiquidType som implementeras olika beroende på växten
                 String message = String.format(MESSAGE_PLANT_WATERING,
-                        plant.getName(), plant.getDailyWaterAmount(), plant.getLiquidType().getDescription());
+                        plant.getClass().getSimpleName() + " " + plant.getName(),
+                        plant.getDailyWaterAmount(),
+                        plant.getLiquidType().getDescription());
                 JOptionPane.showMessageDialog(null, message);
             } else {
                 // Felmeddelande om växten inte hittas
@@ -44,7 +46,6 @@ public class Main {
             }
         }
     }
-
     // Metod för att hitta en växt baserat på namn
     private static Plant findPlantByName(Plant[] plants, String name) {
         for (Plant plant : plants) {

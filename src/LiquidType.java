@@ -1,9 +1,9 @@
 
 // Enum för olika vätsketyper
 public enum LiquidType {
-    TAP_WATER("kranvatten"),
-    MINERAL_WATER("mineralvatten"),
-    PROTEIN_DRINK("proteindryck");
+    TAP_WATER("tap water"),
+    MINERAL_WATER("mineral water"),
+    PROTEIN_DRINK("protein drink");
 
     private final String description; // Inkapsling - Privat variabel med getter för att hämta värdet
 
